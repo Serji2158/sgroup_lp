@@ -14,13 +14,23 @@ import {
   FormInputMessage,
 } from "./MessageFormElements";
 
+const EMAIL_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const EMAIL_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const EMAIL_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+
 const MessageForm = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_491hif6', 'template_21g01pn', form.current, 'WmkzO9q9Sj9KAp_xm')
+    emailjs.sendForm(
+      EMAIL_SERVICE_ID,
+      EMAIL_TEMPLATE_ID,
+      form.current,
+      EMAIL_PUBLIC_KEY
+    )
       .then((result) => {
         console.log(result.text);
         e.target.reset();
