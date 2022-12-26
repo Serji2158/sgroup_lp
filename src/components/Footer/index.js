@@ -35,25 +35,25 @@ const Footer = () => {
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>About us</FooterLinkTitle>
-              <FooterLink to="/">Testimonials</FooterLink>
-              <FooterLink to="/">Careers</FooterLink>
-              <FooterLink to="/">Investors</FooterLink>
+              <FooterLink href="/">Testimonials</FooterLink>
+              <FooterLink href="/">Careers</FooterLink>
+              <FooterLink href="/">Investors</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>Contact us</FooterLinkTitle>
-              <FooterLink to="/contact">Contact</FooterLink>
-              <FooterLink to="/contact">Support</FooterLink>
-              <FooterLink to="/">Destinations</FooterLink>
-              <FooterLink to="/">Sponsorships</FooterLink>
+              <FooterLink href="/contact">Contact</FooterLink>
+              <FooterLink href="/contact">Support</FooterLink>
+              <FooterLink href="/">Destinations</FooterLink>
+              <FooterLink href="/">Sponsorships</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>Social Media</FooterLinkTitle>
-              <FooterLink to="/">Instagram</FooterLink>
-              <FooterLink to="/">Facebook</FooterLink>
-              <FooterLink to="/">Youtube</FooterLink>
-              <FooterLink to="/">Twitter</FooterLink>
+              <FooterLink href="/">Instagram</FooterLink>
+              <FooterLink href="/">Facebook</FooterLink>
+              <FooterLink href="/">Youtube</FooterLink>
+              <FooterLink href="/">Twitter</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
@@ -63,7 +63,8 @@ const Footer = () => {
               Standy Group
             </SocialLogo>
             <WebsiteRights>
-              Standy Group LLC {new Date().getFullYear()}
+              Standy Group LLC {new Date().getFullYear()}.
+              
               All rights reserved.
             </WebsiteRights>
             <SocialIcons>

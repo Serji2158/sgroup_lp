@@ -5,13 +5,13 @@ export const InfoContainer = styled.div`
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
 
   @media screen and (max-width: 768px) {
-    padding: 100px 0;
+    padding: 60px 0;
   }
 `;
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
+  height: 680px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -21,7 +21,7 @@ export const InfoWrapper = styled.div`
 `;
 export const InfoRow = styled.div`
   display: grid;
-  grid-auto-columns: minmax(auto, 1fr);
+  /* grid-auto-columns: minmax(auto, 1fr); */
   align-items: center;
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? `'col2 col1'` : `'col1 col2'`};
@@ -35,18 +35,27 @@ export const Column1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 0;
+  }
 `;
 export const Column2 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col2;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
   padding-bottom: 60px;
-  @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     padding-bottom: 0;
   }
 `;
@@ -74,15 +83,17 @@ export const Heading = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-  /* max-width: 440px; */
-  /* margin-bottom: 35px; */
   font-size: 16px;
   line-height: 24px;
+  text-align: justify;
   color: ${({ darkText }) => (darkText ? "#010606" : "#f7f8fa")};
   @media screen and (max-width: 768px) {
-    
+    font-size: 14px;
   }
 
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export const BtnWrap = styled.div`
@@ -92,9 +103,13 @@ export const BtnWrap = styled.div`
 export const ImgWrap = styled.div`
   max-width: 555px;
   height: 100%;
+
+  @media screen and (max-width: 768px) {
+    max-width: 400px;
+    margin: 0 auto;
+  }
 `;
 export const Img = styled.img`
   width: 100%;
-  /* margin: 0 0 10px 0; */
-  padding-right: 0;
+  padding: 15px;
 `;

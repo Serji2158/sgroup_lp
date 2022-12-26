@@ -24,7 +24,7 @@ export const ContactWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -35,9 +35,7 @@ export const ContactWrapper = styled.div`
 
    @media screen and (max-width: 480px) {
     flex-direction: column;
-  }
-
-  
+  }  
 `;
 
 export const ContactCard = styled.div`
@@ -64,6 +62,15 @@ export const ContactCard = styled.div`
 export const ContactIcon = styled.img`
   height: 500px;
   width: 400px;
+  padding: 15px;
+  @media screen and (max-width: 768px) {
+    height: 410px;
+    padding: 50px;
+  }
+  @media screen and (max-width: 480px) {
+    height: 350px;
+    padding: 30px;
+  }
 `;
 export const ContactH1 = styled.h1`
   font-size: 3rem;
@@ -78,6 +85,9 @@ export const ContactH2 = styled.h2`
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #fff;
+  @media screen and (max-width: 768px) {
+    font-size: 1.25rem;
+  }
 `;
 
 export const ContactsWrapper = styled.div`
@@ -86,14 +96,16 @@ flex-direction: column;
 align-items: center;
 justify-content: space-between;
 padding: 0 30px;
-`
+`;
+
 export const ContactP = styled.p`
   font-size: 1.25rem;
   text-align: center;
   color: #fff;
-   @media screen and (max-width: 480px) {
+
+  @media screen and (max-width: 768px) {
     font-size: 1rem;
-  }  
+  }
 `;
 
 export const ContactRoute = styled(LinkR)`

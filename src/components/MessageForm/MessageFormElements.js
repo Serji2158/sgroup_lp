@@ -60,7 +60,7 @@ export const Form = styled.form`
   z-index: 1;
   display: grid;
   margin: 0 auto;
-  padding: 80px 32px;
+  padding: 60px 32px;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 
@@ -87,6 +87,7 @@ export const FormInputSmall = styled.input`
   height: 50px;
   padding-left: 10px;
   margin-bottom: 20px;
+  border-radius: 5px;
 
   &:first-child {
   margin-right: 10px;
@@ -103,11 +104,14 @@ export const FormInputLarge = styled.input`
   height: 50px;
   padding-left: 10px;
   margin-bottom: 20px;
+  border-radius: 5px;
 `;
 
 export const FormInputMessage = styled.textarea`
   width: 100%;
   padding: 10px 0 0 10px;
+  resize: none;
+  border-radius:5px;
 `;
 
 export const FormButton = styled.button`
