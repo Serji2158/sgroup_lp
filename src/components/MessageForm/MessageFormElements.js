@@ -23,7 +23,7 @@ export const FormWrap = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 480px) {
-    height: 80%;
+    height: 90%;
   }
 `;
 
@@ -37,7 +37,8 @@ export const Icon = styled(Link)`
 
   @media screen and (max-width: 480px) {
     margin-left: 16px;
-    margin-top: 8px;
+    margin-top: 10px;
+    font-size: 24px;
   }
 `;
 
@@ -46,26 +47,22 @@ export const FormContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  @media screen and (max-width: 480px) {
-    padding: 15px;
-  }
+padding: 32px 15px;
 `;
 
 export const Form = styled.form`
   background: #010101;
   max-width: 600px;
   height: auto;
-  width: 100%;
   z-index: 1;
   display: grid;
   margin: 0 auto;
-  padding: 60px 32px;
+  padding: 32px 32px;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 
   @media screen and (max-width: 480px) {
-    padding: 32px 32px;
+    padding: 20px 20px;
   }
 `;
 
@@ -75,6 +72,11 @@ export const FormH1 = styled.h1`
   font-size: 20px;
   font-weight: 400;
   text-align: center;
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
 `;
 
 export const FormDataWrapper = styled.div`
@@ -84,7 +86,7 @@ export const FormDataWrapper = styled.div`
 
 export const FormInputSmall = styled.input`
   flex: 1;
-  height: 50px;
+  height: 45px;
   padding-left: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -94,6 +96,9 @@ export const FormInputSmall = styled.input`
   }
 
   @media screen and (max-width: 480px) {
+    height: 30px;
+    margin-bottom: 10px;
+
     &:first-child {
       margin-right: 0;    
   }
@@ -101,10 +106,15 @@ export const FormInputSmall = styled.input`
 `
 export const FormInputLarge = styled.input`
   width: 100%;
-  height: 50px;
+  height: 45px;
   padding-left: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
+
+  @media screen and (max-width: 480px) {
+    height: 30px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const FormInputMessage = styled.textarea`
@@ -117,7 +127,7 @@ export const FormInputMessage = styled.textarea`
 export const FormButton = styled.button`
   margin-top: 20px;
   background: #FFBF63;
-  padding: 20px 20px;
+  padding: 10px 20px;
   color: #010101;
   border: none;
   border-radius: 5px;
@@ -125,4 +135,9 @@ export const FormButton = styled.button`
   font-weight: 700;
   cursor: pointer;
   width: 100%;
+
+  @media screen and (max-width: 480px) {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
 `;
