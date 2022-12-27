@@ -44,10 +44,10 @@ export const Icon = styled(Link)`
 
 export const FormContent = styled.div`
   height: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
-padding: 32px 15px;
+  justify-content: center; */
+  padding: 32px 15px;
 `;
 
 export const Form = styled.form`
