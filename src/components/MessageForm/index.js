@@ -7,6 +7,7 @@ import {
   FormContent,
   FormH1,
   FormWrap,
+  BackArrowIcon,
   Icon,
   FormDataWrapper,
   FormInputSmall,
@@ -42,7 +43,10 @@ const MessageForm = () => {
     <>
       <Container>
         <FormWrap>
-          <Icon to="/">Standy Group</Icon>
+            <Icon to="/">
+              <BackArrowIcon />
+              Standy Group
+            </Icon>          
           <FormContent>
             <Form ref={form} onSubmit={sendEmail} >
               <FormH1>Send us your message</FormH1>

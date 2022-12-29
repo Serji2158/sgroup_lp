@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { SlArrowLeftCircle } from "react-icons/sl";
 
 export const Container = styled.div`
   min-height: 692px;
@@ -22,31 +23,63 @@ export const FormWrap = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  padding: 30px 15px 0 15px;
+
+    
   @media screen and (max-width: 480px) {
     height: 90%;
   }
 `;
 
+export const BackArrowIcon = styled(SlArrowLeftCircle)`
+  color: #fff;
+  width: 27px;
+  height: 27px;
+
+  &:hover {
+    color: black;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 15px;
+    height: 15px;
+  }
+`;
+
 export const Icon = styled(Link)`
-  margin-left: 32px;
-  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 275px;
+  margin-left: 50px;
+
   text-decoration: none;
   color: #fff;
   font-weight: 700;
   font-size: 32px;
 
+  &:hover {
+    color: black;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    margin-left: 16px;
+    font-size: 20px;
+    max-width: 175px;
+  }
   @media screen and (max-width: 480px) {
     margin-left: 16px;
-    margin-top: 10px;
-    font-size: 24px;
+    font-size: 16px;
+    max-width: 140px;
   }
 `;
 
 export const FormContent = styled.div`
   height: 100%;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
   padding: 32px 15px;
 `;
 
