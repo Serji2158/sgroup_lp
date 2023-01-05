@@ -68,6 +68,7 @@ const MessageForm = () => {
                   required />                  
                 <FormInputLarge
                   type="subject"
+                  name='user_subject'
                   placeholder="Subject"
                   required />                  
                 <FormInputMessage
