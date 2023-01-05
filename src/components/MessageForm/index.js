@@ -14,6 +14,9 @@ import {
   FormInputLarge,
   FormInputMessage,
 } from "./MessageFormElements";
+ import { ToastContainer, toast } from 'react-toastify';
+ import 'react-toastify/dist/ReactToastify.css';
+
 
 const EMAIL_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 const EMAIL_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
@@ -23,8 +26,20 @@ console.log(EMAIL_PUBLIC_KEY, EMAIL_TEMPLATE_ID, EMAIL_SERVICE_ID)
 const MessageForm = () => {
   const form = useRef();
 
+  const notify = () => toast.success('Your message is being sent...', {
+    position: "top-center",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
+
   const sendEmail = (e) => {
     e.preventDefault();
+    notify();
 
     emailjs.sendForm(
       EMAIL_SERVICE_ID,
@@ -33,12 +48,15 @@ const MessageForm = () => {
       EMAIL_PUBLIC_KEY
     )
       .then((result) => {
-        console.log(result.text);
+        console.log(result.text);        
         e.target.reset();
       }, (error) => {
           console.log(error.text);
-      });
+      })   
   };
+
+  
+  
   return (
     <>
       <Container>
@@ -79,11 +97,22 @@ const MessageForm = () => {
                   cols="30"
                   rows="6"
                   required />
-                <FormButton type="submit">Send</FormButton>                
+                <FormButton type="submit" >Send</FormButton>                
               </FormDataWrapper>              
             </Form>
           </FormContent>
         </FormWrap>
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"/>
       </Container>
     </>
   );
