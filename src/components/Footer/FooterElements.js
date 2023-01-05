@@ -54,6 +54,18 @@ export const FooterLinkTitle = styled.h1`
   margin-bottom: 16px;
   
 `;
+export const FooterLinkContact = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+
+  &:hover {
+    color: #FFBF63;
+    transition: 0.3s ease-out;
+  }
+`;
+
 export const FooterLink = styled.a`
   color: #fff;
   text-decoration: none;
@@ -65,6 +77,8 @@ export const FooterLink = styled.a`
     transition: 0.3s ease-out;
   }
 `;
+
+
 export const SocialMedia = styled.section`
   max-width: 1000px;
   width: 100%;

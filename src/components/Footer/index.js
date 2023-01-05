@@ -9,6 +9,7 @@ import {
 import {
   FooterContainer,
   FooterLink,
+  FooterLinkContact,
   FooterLinkItems,
   FooterLinksContainer,
   FooterLinksWrapper,
@@ -41,8 +42,8 @@ const Footer = () => {
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>Contact us</FooterLinkTitle>
-              <FooterLink href="/contact">Contact</FooterLink>
-              <FooterLink href="/contact">Support</FooterLink>
+              <FooterLinkContact to="/contact">Contact</FooterLinkContact>
+              <FooterLinkContact to="/contact">Support</FooterLinkContact>
               <FooterLink href="/">Destinations</FooterLink>
               <FooterLink href="/">Sponsorships</FooterLink>
             </FooterLinkItems>
